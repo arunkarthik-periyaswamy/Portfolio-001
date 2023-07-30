@@ -21,7 +21,7 @@
   --content: rgb(31, 31, 31);
   --hljs-bg: rgb(28, 29, 33);
   --code-bg: rgb(245, 245, 245);
-  --border: rgb(238, 238, 238) ;
+  --border: rgb(238, 238, 238);
 }
 
 .dark {
@@ -33,11 +33,11 @@
   --content: rgb(196, 196, 197);
   --hljs-bg: rgb(46, 46, 51);
   --code-bg: rgb(55, 56, 62);
-  --border: rgb(51, 51, 51) ;
+  --border: rgb(51, 51, 51);
 }
 
 .name {
-  color: black;
+  color: var(--content);
   text-decoration: none;
   font-family: "Courier New", Courier, monospace;
 }
@@ -56,13 +56,22 @@
   font-size: 24px;
   font-weight: 700;
 }
+.nav .logo button {
+  border: 0;
+  background: 0 0;
+  font: inherit;
+  margin: auto 4px;
+}
+.nav .logo svg {
+  padding-left: 1px;
+  height: 24px;
+}
 .nav .menu {
   list-style: none;
   display: flex;
   word-break: keep-all;
   overflow-x: auto;
   white-space: nowrap;
-  text-decoration: none;
 }
 .nav .menu li {
   margin: auto var(--gap);
@@ -70,7 +79,7 @@
 }
 .nav .menu li a {
   text-decoration: none;
-  color: black;
+  color: var(--content);
 }
 
 .main {
@@ -110,4 +119,22 @@
     flex-direction: column;
     align-items: center;
   }
+}
+.dark {
+  background-color: var(--theme);
+  color: white !important;
+}
+.dark .nav .logo button {
+  color: white;
+}
+.dark .nav .menu li a {
+  color: white;
+}
+.dark .social-icons li a {
+  color: white;
+}
+
+/* Hide the sun icon initially */
+#sun {
+  display: none;
 }/*# sourceMappingURL=portfolio.css.map */
